@@ -1,0 +1,11 @@
+hello,this is my first time to use github!
+
+手动修改文件
+add
+commit
+push
+ 
+
+git add <filenam>
+git commit -m "注释修改信息"
+git push server(git@github.com:rainbowXXX/Amazing.git)
