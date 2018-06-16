@@ -1,11 +1,49 @@
 hello,this is my first time to use github!
 
-手动修改文件
+1.首先你要有一个github账号
+在官网注册https://github.com/
+邮箱和密码以及用户名
+2.注册成功后，新建一个project
+默认有readme.md文件
+
+3.在windows下安装git
+下载地址   https://gitforwindows.org/
+傻瓜式安装
+
+4.安装完成后打开github bash
+配置gitbash和github的通信协议
+ssh-keygen -t rsa -c "github邮箱地址"然后一直回车
+根据产生的私钥地址找到自己的私钥文件，打开并复制
+
+5.在github上打开自己的主页settings->SSH->newSSHkey
+复制就可以title可以随意
+
+6.验证设置 
+ssh -T git@github.com
+
+7.git config --global user.name "你的github用户名”
+git config --global user.email "你的github邮箱“
+配置成功，发现gitbash命令行多出了master字样
+
+8.现在可以开始内容了
+在本地主机上新建一个文件夹（用于存储在本地电脑上想要上传到github上的文件）
+注意文件路径中不要出现中文
+
+在github bash中切换到该目录
+新建本地仓库
+git init
+然后把远程仓库的东西拉到本地，建立远程连接：
+git remote add origin git@github.com/你的git
+让后用
+git pull git@github.com/你的git
+此时发现自己本地已经有github上的READEME.md文件了
+
+如果想要把在本地的文件添加到github上，就可以用以下四个步骤来完成
+手动修改文件，手动添加内容，文件等
 add
 commit
 push
  
-
 git add <filenam>
 git commit -m "注释修改信息"
-git push server(git@github.com:rainbowXXX/Amazing.git)
+git push server(git@github.com:rainbowXXX/Amazing.git
